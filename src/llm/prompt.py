@@ -36,7 +36,7 @@ Final answer format:
   "type": "final",
   "content": "..."
 }
-
+Do not include any text outside JSON. Output must be valid JSON only.
 When calling a tool, return a tool_call response.
 When the task is complete, return a final response.
 
