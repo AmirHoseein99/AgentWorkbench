@@ -52,7 +52,7 @@ def call_agent(user_input, conversation_history, conversation_id: str):
                 content=parsed_response,
                 conversation_id=conversation_id
             )
-            return parsed_response["content"]
+            return parsed_response["message"]
 
         # --------------------
         # TOOL CALL
@@ -73,6 +73,7 @@ def call_agent(user_input, conversation_history, conversation_id: str):
                 tool_result = tool(**tool_args)
             except Exception as e:
                 tool_result = str(e)
+                
             append_to_conversation(
                 role="assistant",
                 content=parsed_response,
@@ -97,7 +98,5 @@ def call_agent(user_input, conversation_history, conversation_id: str):
                 conversation_id=conversation_id,
                 tool_name=tool_name
             )
-            i += 1
-            continue
 
     return "Sorry, I couldn't complete the task within the step limit."
