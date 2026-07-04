@@ -1,5 +1,4 @@
 import subprocess
-import sys
 from logger import get_logger
 from agent.tools.base import BaseTool
 
