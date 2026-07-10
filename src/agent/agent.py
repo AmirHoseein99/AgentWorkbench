@@ -1,4 +1,4 @@
-from llm.prompt import build_agent_system_prompt
+from llm.prompts.agent_system_prompt import build_agent_system_prompt
 from llm.openrouter import OpenRouterAPI
 from agent.tools.web_search import WebSearchTool
 from agent.tools.python_executor import PythonExecutorTool

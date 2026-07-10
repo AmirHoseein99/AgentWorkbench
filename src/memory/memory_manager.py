@@ -4,7 +4,7 @@ import shutil
 from typing import List, Any
 from pathlib import Path
 from llm.openrouter import OpenRouterAPI
-from llm.prompt import MEMORY_SUMMARIZER_PROMPT
+from llm.prompts.memory_prompt import MEMORY_SUMMARIZER_PROMPT
 from core.config import setting
 
 
